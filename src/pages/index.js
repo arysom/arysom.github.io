@@ -10,18 +10,16 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <SEO title="home" keywords={[`gatsby`, `application`, `react`]} />
-      <div className="blog-posts">
+      <div className="py-4">
         {posts
           .map(({ node: post }) => {
             return (
-              <div className="blog-post-preview" key={post.id}>
-                <span className="blog-post-date">{post.fields.date}</span>
-                <h1>
-                <Link style={{
-                  textDecoration:`none`
-                }} to={post.fields.slug}>{post.frontmatter.title}</Link>
+              <div className="py-4" key={post.id}>
+                <span>{post.fields.date}</span>
+                <h1 className="mb-2">
+                <Link className="no-underline text-orange-dark hover:text-orange-lighter" to={post.fields.slug}>{post.frontmatter.title}</Link>
 </h1>
-                <p>{post.excerpt}</p>
+                <p className="leading-normal text-black">{post.excerpt}</p>
                 <p className="tags"></p>
               </div>
             )

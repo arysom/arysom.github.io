@@ -17,25 +17,17 @@ const Layout = ({ children, singlePost }) => (
     `}
     render={data => (
       <>
+        <div className="flex flex-col min-h-screen">
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 50,
-          }}
-        >
+        <div className="container flex-1 mx-auto py-4 antialiased font-sans">
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-{ singlePost && <Link style={{
-  border: `1px solid black`,
-  padding: '5px 10px',
-  marginLeft: 25
-}} to="/">Back to index</Link> }
-          </footer>
         </div>
+
+          <footer className="w-full py-4 pin-b text-center border-t border-grey p-4">
+            © {new Date().getFullYear()}, Built with <a className="no-underline text-red hover:text-green" href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://tailwindcss.com" className="no-underline text-green hover:text-red">Tailwind</a>
+{ singlePost && <Link className="bg-transparent hover:bg-blue text-blue-dark font-bold no-underline hover:text-white py-2 ml-2 px-4 border border-blue hover:border-transparent rounded" to="/">Back to index</Link> }
+          </footer>
+    </div>
       </>
     )}
   />

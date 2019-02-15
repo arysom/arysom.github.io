@@ -1,0 +1,13 @@
+h1.blog-post-title {
+    @apply mb-4;
+}
+h2 {
+    @apply mb-2 mt-6 text-black;
+}
+
+p,ul,ol {
+    @apply leading-normal text-black mb-4;
+}
+.gatsby-highlight {
+    @apply my-4;
+}

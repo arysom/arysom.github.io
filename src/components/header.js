@@ -3,26 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `black`
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+  <header className="bg-black shadow-md">
+    <div className="container mx-auto py-4">
+      <h1 className="font-black tracking-wide text-4xl ">
+        <Link to="/" className="hover:text-orange no-underline text-white">
           {siteTitle}
         </Link>
       </h1>
