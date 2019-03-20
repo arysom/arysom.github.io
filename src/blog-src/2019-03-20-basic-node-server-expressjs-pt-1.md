@@ -1,5 +1,5 @@
 ---
-title: Basic node server, I MEAN expressJS
+title: Basic node server, I MEAN expressJS pt. 1
 tags:
     - express
 categories:
@@ -35,3 +35,5 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 Run `node index.js`. It will interpret your js file. Then you can enter `http://localhost:3000` into your browser to see the result immediately. Instead of the hello world, you can send anything else with res object passed into the app's function. The response can be a string, a JSON thing, a file, download prompt, even redirect.
 
 Saying hello when you use project for the first time is a common path to understand what's going on. But what's coming next? Add the database with mongo, prepare docker compose file to be independent of the environment, make a middleware to protect you "precious". And all that, we'll be making in an upcoming part. Can't wait.
+
+_This text is dedicated to the loyal ~~person~~audience of this blog_
